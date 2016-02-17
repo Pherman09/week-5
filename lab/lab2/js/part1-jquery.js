@@ -149,5 +149,39 @@ var Stamen_TonerLite = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/ton
 ===================== */
 
 $(document).ready(function() {
-  // Do your stuff here
+  $('#main-heading').text('Landmarks');
+  $('#text-label1').text('Description');
+  $('#text-input1').val('Liberty Bell');
+  $('#text-label2').text('Address');
+  $('#text-input2').val('503 Liberty Bell Place');
+
+  $('#long-label').text('Long');
+  $('#long-input').val('-75.150282');
+
+  $('#number-label').text('Lat');
+  $('#numeric-input').val('39.949577');
+
+  $('#checkbox-label1').text('Reasonably priced?');
+  $('#cbox-input1').prop('checked', true); //from stackoverflow
+  $('#checkbox-label2').text('Was it dope?');
+  $('#cbox-input2').prop('checked', true);
+  $('#color-label').text('Describe your mood upon visiting with a color');
+  $('#color-input').val('#ff0000'); //the color red
+
+  var arrayOfAllInputs = $('.sidebar input');
+
+  _.each(arrayOfAllInputs, function(inputX){
+    $(inputX).prop('disabled', false);
+  });
+
+  $('button').click(function (){
+    var lat = arrayOfAllInputs[3]["value"];
+    var long = arrayOfAllInputs[2]["value"];
+    var description = arrayOfAllInputs[1]["value"];
+    var color = arrayOfAllInputs[6]["value"]
+    L.circleMarker([lat,long], {fillColor: color}).bindPopup(description).addTo(map);
+  });
+
+
+
 });

@@ -47,11 +47,7 @@ Remember to wrap all of your jQuery inside of the following block, which ensures
 that all elements on the page will be loaded before jQuery starts:
 
 ```
-$(document).ready(function() {
-
-  /* =====================
-   Your jQuery code here
-  ===================== */
-
+$(document).ready(function() {\
+  var inputToVar = [m]
 });
 ```

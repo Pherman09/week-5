@@ -9,9 +9,19 @@
   <body>
     <!-- Sidebar -->
     <div class="sidebar">
-      <!-- =====================
-      Add elements in this space
-      ====================== -->
+      <label id="url-label" for="url-input">Enter URL</label>
+      <input id="url-input" class="inputclass" type="text" placeholder="URL" value="URL.json" disabled>
+      <br/>
+      <br/>
+      <label id="long-label" for="long-input">Longitude:</label>
+      <input id="long-input" class="inputclass" type="text" placeholder="Longitude" value="Longitude Object Name?" disabled>
+      <br>
+      <br>
+      <label id="lat-label" for="lat-input">Latitude:</label>
+      <input id="lat-input" class="inputclass" type="text" placeholder="Latidude" value="Latitude Object Name?" disabled>
+      <br>
+      <br>
+      <button>Map It! </button>
     </div>
     <!-- Map -->
     <div id="map" class="map"></div>
